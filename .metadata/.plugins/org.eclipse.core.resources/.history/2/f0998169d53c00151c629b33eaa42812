@@ -1,0 +1,8 @@
+package problemset;
+
+public class RemoveElements {
+	public ListNode solution(ListNode head, int val)
+	{
+		
+	}
+}

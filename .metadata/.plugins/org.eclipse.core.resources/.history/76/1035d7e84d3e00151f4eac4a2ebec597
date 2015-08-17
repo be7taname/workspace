@@ -1,0 +1,8 @@
+package problemset;
+
+public class LongestCommonPrefix {
+	public String solution(String[] strs)
+	{
+		
+	}
+}

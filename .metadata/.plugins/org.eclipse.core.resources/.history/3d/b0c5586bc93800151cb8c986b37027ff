@@ -1,0 +1,35 @@
+package common;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+//Implement Stack using Queues
+public class MyStack {
+	Queue<Integer> q0 = new LinkedList<>();
+	Queue<Integer> q1 = new LinkedList<>();
+	int pushQ = 0;
+	
+    // Push element x onto stack.
+    public void push(int x) {
+        if (pushQ == 0) {
+       		q0.add(x);
+        } else {
+        	q1.add(x);
+        }
+    }
+
+    // Removes the element on top of the stack.
+    public void pop() {
+        
+    }
+
+    // Get the top element.
+    public int top() {
+        
+    }
+
+    // Return whether the stack is empty.
+    public boolean empty() {
+        
+    }
+}

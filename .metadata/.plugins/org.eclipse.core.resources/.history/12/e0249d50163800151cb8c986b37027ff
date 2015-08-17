@@ -1,0 +1,8 @@
+package problemset;
+
+public class LengthOfLastWord {
+	public void solution(String s)
+	{
+		s.lastIndexOf(' ');
+	}
+}

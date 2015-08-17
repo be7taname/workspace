@@ -1,0 +1,16 @@
+package problemset;
+
+public class RemoveElement {
+	public int solution(int[] nums, int val)
+	{
+		int cnt;
+		cnt = nums.length;
+		for (int i = nums.length - 1; i >= 0; i--) {
+			if (nums[i] == val) {
+				if (i != cnt - 1) nums[i] = nums[cnt-1];
+				cnt--;
+			}
+		}
+		return cnt;
+	}
+}

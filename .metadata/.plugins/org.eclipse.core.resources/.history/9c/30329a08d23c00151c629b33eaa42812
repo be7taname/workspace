@@ -1,0 +1,69 @@
+package problemset;
+
+public class ReverseInteger {
+	public int solution(int x)
+	{
+		int y = 0, s, cnt = 0;
+		
+		s = (x >= 0) ? 0 : 1;
+		while (x != 0) {
+			cnt++;
+			if (cnt > 10) return 0;
+			if (cnt == 10) {
+				if (s == 0) {
+					if (y > 214748364) return 0;
+					else if (y == 214748364) {
+						if (x%10 > 7) return 0;
+					}
+				} else {
+					if (y < -214748364) return 0;
+					else if (y == -214748364) {
+						if (x%10 < -8) return 0;
+					}
+				}
+			}
+			y *= 10;
+			y += x%10;
+			x /= 10;
+		}
+		
+		return y;
+	}
+	public int solutionLong(int x)
+	{
+		int y = 0, s, cnt = 0;
+		
+		s = (x >= 0) ? 0 : 1;
+		while (x != 0) {
+			cnt++;
+			if (cnt > 10) return 0;
+			if (cnt == 10) {
+				if (s == 0) {
+					if (y > 214748364) return 0;
+					else if (y == 214748364) {
+						if (x%10 > 7) return 0;
+					}
+				} else {
+					if (y < -214748364) return 0;
+					else if (y == -214748364) {
+						if (x%10 < -8) return 0;
+					}
+				}
+			}
+			y *= 10;
+			y += x%10;
+			x /= 10;
+		}
+		
+		return y;
+	}
+	
+	public void test()
+	{
+		System.out.println(solution(123));
+		System.out.println(solution(-123));
+		System.out.println(solution(1534236469));
+		System.out.println(solution(-2147483648));
+		System.out.println(solution(100));
+	}
+}

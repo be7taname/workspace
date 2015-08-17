@@ -1,0 +1,10 @@
+package problemset;
+
+import common.TreeNode;
+
+public class HasPathSum {
+	public boolean solution(TreeNode root, int sum)
+	{
+		
+	}
+}

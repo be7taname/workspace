@@ -1,0 +1,42 @@
+package common;
+
+import java.util.*;
+// Use Stack
+public class MyQueue {
+	Stack<Integer> pushSt = new Stack<>();
+	Stack<Integer> popSt = new Stack<>();
+	
+    // Push element x to the back of queue.
+    public void push(int x) {
+        pushSt.add(x);
+    }
+
+    // Removes the element from in front of queue.
+    public void pop() {
+        if (popSt.empty()) {
+        	int x;
+        	while (!pushSt.empty()) {
+        		x = pushSt.pop();
+        		popSt.add(x);
+        	}
+        }
+        popSt.pop();
+    }
+
+    // Get the front element.
+    public int peek() {
+        if (popSt.empty()) {
+        	int x;
+        	while (!pushSt.empty()) {
+        		x = pushSt.pop();
+        		popSt.add(x);
+        	}
+        }
+        return popSt.peek();
+    }
+
+    // Return whether the queue is empty.
+    public boolean empty() {
+        
+    }
+}

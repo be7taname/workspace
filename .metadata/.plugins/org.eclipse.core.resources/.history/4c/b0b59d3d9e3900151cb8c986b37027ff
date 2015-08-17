@@ -1,0 +1,15 @@
+package problemset;
+
+import common.TreeNode;
+
+public class MaxDepth {
+	public int solution(TreeNode root)
+	{
+		if (root == null) return -1;
+		
+		int leftDepth = solution(root.left);
+		int rightDepth = solution(root.right);
+		
+		return Math.max(leftDepth, rightDepth) + 1;
+	}
+}

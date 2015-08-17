@@ -1,0 +1,31 @@
+package problemset;
+
+public class PlusOne {
+	public int[] solution(int[] digits)
+	{
+		int len = digits.length;
+		
+		if (digits[len-1] != 9) {
+			digits[len-1] += 1;
+			return digits;
+		} else {
+			int all9 = 1, i;
+			int[] sum;
+			for (i = len - 2; i >= 0; i--) {
+				if (digits[i] != 9) {
+					all9 = 0;
+					break;
+				}
+			}
+			if (all9 == 1) {
+				sum = new int[len + 1];
+				sum[0] = 1;
+			} else {
+				sum = new int[len];
+				for (int j = 0; j < i; j++) sum[j] = digits[j];
+				sum[i] = digits[i] + 1;
+			}
+			return sum;
+		}
+	}
+}

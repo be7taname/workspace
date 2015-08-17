@@ -1,0 +1,36 @@
+package problemset;
+
+public class ConvertToExcelColumnTitle {
+	public String solution(int n)
+	{
+		String table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		int num = 26, iter, section;
+		String title = new String("");
+		
+		iter = 0;
+		section = 1;
+		while (true) {
+			iter++;
+			section *= num;
+			if (n <= section) {
+				for (int i = 0; i < iter; i++) {
+					title = table.charAt((n-1)%num) + title;
+					n = (n-1)/num + 1;
+				}
+				break;
+			} else {
+				n -= section;
+			}
+		}
+		
+		return title;
+	}
+	
+	public void test()
+	{
+		System.out.println(solution(1));
+		System.out.println(solution(26));
+		System.out.println(solution(51));
+		System.out.println(solution(26*26+26+5));
+	}
+}

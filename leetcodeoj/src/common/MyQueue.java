@@ -1,0 +1,39 @@
+package common;
+
+import java.util.*;
+
+// Implement Queue using Stacks
+public class MyQueue {
+	Stack<Integer> pushSt = new Stack<>();
+	Stack<Integer> popSt = new Stack<>();
+	
+    // Push element x to the back of queue.
+    public void push(int x) {
+        pushSt.add(x);
+    }
+
+    // Removes the element from in front of queue.
+    public void pop() {
+        if (popSt.empty()) {
+        	while (!pushSt.empty()) {
+        		popSt.add(pushSt.pop());
+        	}
+        }
+        popSt.pop();
+    }
+
+    // Get the front element.
+    public int peek() {
+        if (popSt.empty()) {
+        	while (!pushSt.empty()) {
+        		popSt.add(pushSt.pop());
+        	}
+        }
+        return popSt.peek();
+    }
+
+    // Return whether the queue is empty.
+    public boolean empty() {
+        return (popSt.empty() && pushSt.empty());
+    }
+}

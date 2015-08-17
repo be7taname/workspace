@@ -1,0 +1,45 @@
+package problemset;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import common.TreeNode;
+
+public class MinDepth {
+	public int solution(TreeNode root)
+	{
+		if (root == null) return 0;
+
+		Queue<TreeNode> nodes = new LinkedList<>();
+		Queue<Integer> depths = new LinkedList<>();
+				
+		TreeNode curNode;
+		int curDepth = 0;
+		
+		nodes.add(root);
+		depths.add(1);
+		while (!nodes.isEmpty()) {
+			curNode = nodes.remove();
+			curDepth = depths.remove();
+			if ((curNode.left == null) && (curNode.right == null)) {
+				return curDepth;
+			} else {
+				if (curNode.left != null) {
+					nodes.add(curNode.left);
+					depths.add(curDepth + 1);
+				}
+				if (curNode.right != null) {
+					nodes.add(curNode.right);
+					depths.add(curDepth + 1);
+				}
+			}
+		}
+		
+		return -1;
+	}
+
+	public int solutionRecursive(TreeNode root)
+	{
+	}
+
+}

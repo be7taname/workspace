@@ -1,0 +1,23 @@
+package problemset;
+
+public class StrStr {
+	public int StrStr(String haystack, String needle)
+	{
+		int hlen = haystack.length();
+		int nlen = needle.length();
+		int match, i;
+		for (i = 0; i < hlen - nlen; i++) {
+			match = 1;
+			for (int j = 0; j < nlen - 1; j++) {
+				if (haystack.charAt(i+j) != needle.charAt(j)) {
+					match = 0;
+					break;
+				}
+			}
+			if (match == 1) {
+				return i;
+			}
+		}
+		return -1;
+	}
+}

@@ -1,0 +1,17 @@
+package problemset;
+
+public class ConvertToExcelColumnNumber {
+	public int solution(String s)
+	{
+		for (int i = 0; i < s.length(); i++) {
+			System.out.println(Character.valueOf(s.charAt(i)));
+		}
+		
+		return 0;
+	}
+	
+	public void test()
+	{
+		System.out.println(solution("AA"));
+	}
+}

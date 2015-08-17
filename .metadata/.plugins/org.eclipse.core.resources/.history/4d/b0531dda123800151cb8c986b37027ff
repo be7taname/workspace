@@ -1,0 +1,36 @@
+package common;
+
+public class MinStackFast {
+	StackNode head;
+
+    public void push(int x) {
+    	StackNode st = new StackNode();
+    	st.val = x;
+    	if ((head == null) || (x < head.min)) {
+    		st.min = x;
+    	} else {
+    		st.min = head.min;
+    	}
+    	st.next = head;
+    	head = st;
+    }
+
+    public void pop() {
+        head = head.next;
+    }
+
+    public int top() {
+        return head.val;
+    }
+
+    public int getMin() {
+        return head.min;
+    }
+    
+    class StackNode {
+    	public int val;
+    	public int min;
+    	public StackNode next;
+    }
+
+}

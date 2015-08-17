@@ -1,0 +1,23 @@
+package problemset;
+
+import common.ListNode;
+
+public class RemoveElements {
+	public ListNode solution(ListNode head, int val)
+	{
+		int flag;
+		
+		if (head == null) return head;
+		
+		flag = 0;
+		while (head.next != null) {
+			if (head.val != val) {
+				flag = 1;
+				break;
+			}
+			head = head.next;
+		}
+		
+		
+	}
+}

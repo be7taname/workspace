@@ -1,0 +1,14 @@
+package problemset;
+
+public class CountPrimes {
+	public int solution(int n)
+	{
+
+		boolean[] table = new boolean();
+		if (n <= 2) return 0;
+		if (n == 3) return 1;
+		else {
+			
+		}
+	}
+}

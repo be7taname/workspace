@@ -1,0 +1,10 @@
+package problemset;
+
+import java.util.Hashtable;
+
+public class ContainsDuplicate {
+	public boolean solution(int[] nums)
+	{
+		Hashtable<Integer, Integer> counter = new Hashtable<>();
+	}
+}

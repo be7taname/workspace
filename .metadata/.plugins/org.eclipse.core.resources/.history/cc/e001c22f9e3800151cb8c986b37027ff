@@ -1,0 +1,12 @@
+package problemset;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SummaryRanges {
+	public List<String> solution(int[] nums) {
+		List<String> range = new ArrayList<>();
+		
+		return range;
+	}
+}

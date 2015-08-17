@@ -1,0 +1,10 @@
+package problemset;
+
+import common.ListNode;
+
+public class GetIntersectionNode {
+	public ListNode solution(ListNode headA, ListNode headB)
+	{
+		
+	}
+}

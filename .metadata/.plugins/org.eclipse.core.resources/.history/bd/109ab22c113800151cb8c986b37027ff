@@ -1,0 +1,39 @@
+package common;
+
+public class MinStack {
+	StackNode head;
+	StackNode head4min;
+
+    public void push(int x) {
+    	StackNode st = new StackNode();
+    	st.val = x;
+    	st.next = head;
+    	head = st;
+    	if ((head4min == null) || (x <= head4min.val)) {
+    		StackNode st4min = new StackNode();
+    		st4min.val = x;
+    		st4min.next = head4min;
+    		head4min = st4min;
+    	}
+    }
+
+    public void pop() {
+    	if (head.val == head4min.val) {
+    		head4min = head4min.next;
+    	}
+        head = head.next;
+    }
+
+    public int top() {
+        return head.val;
+    }
+
+    public int getMin() {
+        
+    }
+    
+    class StackNode {
+    	public int val;
+    	public StackNode next;
+    }
+}

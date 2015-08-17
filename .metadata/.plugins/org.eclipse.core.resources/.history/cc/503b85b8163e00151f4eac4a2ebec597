@@ -1,0 +1,136 @@
+package problemset;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import common.ListNode;
+
+public class IsPalindrome {
+	private static final Logger logger = LogManager.getLogger();
+	
+	public boolean solution(ListNode head)
+	{
+		int len, len1h, first2h;
+		ListNode currNode, prevNode, currHead, tempNode;
+		
+		len = 0;
+		currNode = head;
+		while (currNode != null) {
+			len++;
+			currNode = currNode.next;
+		}
+		if (len < 2) return true;
+		
+		currNode = head;
+		for (int i = 0; i < len; i++) {
+			currNode = currNode.next;
+		}
+
+		len1h = len / 2;
+		first2h = (len + 1) / 2;
+		currHead = head; prevNode = head;
+		for (int i = 1; i < len1h; i++) {
+			currNode = prevNode.next;
+			tempNode = currNode.next;
+			currNode.next = currHead;
+			currHead = currNode;
+			prevNode.next = tempNode;
+		}
+		
+		prevNode = currHead;
+		currNode = currHead;
+		for (int i = 0; i < first2h; i++) {
+			currNode = currNode.next;
+		}
+		for (int i = 0; i < len1h; i++) {
+			if (prevNode.val != currNode.val) return false;
+			prevNode = prevNode.next;
+			currNode = currNode.next;
+		}
+		
+		return true;
+	}
+	
+	public void test2()
+	{
+		int[] valueList = new int[]{4, 8, 5, 1, 5, 8, 4};
+		ListNode head = ListNode.genList(valueList);
+		
+		System.out.println(solution(head));
+	}
+	
+	public boolean solution(int x) 
+	{
+		int div, num_digits;
+		
+		if (x < 0) return false;
+		else if (x < 10) return true;
+		else {
+			div = 10;
+			num_digits = 2;
+			while (x/div >= 10) {
+				div *= 10;
+				num_digits++;
+			}
+//			logger.debug("div = " + div + ". num_digits = " + num_digits);
+			for (int i = 0; i < num_digits/2; i++) {
+//				logger.debug("x/div = " + x/div + ". x%10 = " + x%10);
+				if (x/div != x%10) return false;
+				else {
+					x %= div;
+					x /= 10;
+					div /= 100;
+				}
+//				logger.debug("div = " + div + ". x = " + x);
+			}
+			return true;
+		}
+	}
+	
+	public boolean solution(String s)
+	{
+		String t = new String("");
+		for (int i = 0; i < s.length(); i++) {
+			
+		}
+	}
+	
+	public String toString(int x)
+	{
+		if (solution(x)) {
+			return x + " is Palindrome";
+		} else {
+			return x + " is not Palindrome";
+		}
+	}
+	
+	public boolean solutionStr(int x)
+	{
+		String str = Integer.toString(x);
+		
+		if (x < 0) return false;
+		else if (x < 10) return true;
+		else {
+			for (int i = 0; i < str.length()/2; i++) {
+				if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+	
+	public void test()
+	{
+		int x1, x2, x3;
+		x1 = 1874994781;
+		x2 = 2200;
+		x3 = 48584;
+		System.out.println(toString(x1));
+		System.out.println(toString(x2));
+		System.out.println(toString(x3));
+		System.out.println(x1 + " = " + solutionStr(x1));
+		System.out.println(x2 + " = " + solutionStr(x2));
+		System.out.println(x3 + " = " + solutionStr(x3));
+	}
+}

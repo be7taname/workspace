@@ -1,0 +1,10 @@
+package problemset;
+
+import java.util.Stack;
+
+public class IsValidParentheses {
+	public boolean solution(String s)
+	{
+		Stack<String> paren = new Stack<>();
+	}
+}

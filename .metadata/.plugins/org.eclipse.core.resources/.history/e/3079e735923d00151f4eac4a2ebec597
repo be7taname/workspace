@@ -1,0 +1,15 @@
+package problemset;
+
+public class ConvertToExcelColumnNumber {
+	public int solution(String s)
+	{
+		for (int i = 0; i < s.length(); i++) {
+			Character.valueOf(s.charAt(i));
+		}
+	}
+	
+	public void test()
+	{
+		
+	}
+}

@@ -1,0 +1,8 @@
+package problemset;
+
+public class MinDepth {
+	public int solution(TreeNode node)
+	{
+		
+	}
+}

@@ -1,0 +1,8 @@
+package problemset;
+
+public class ContainsDuplicate {
+	public boolean solution(int[] nums)
+	{
+		
+	}
+}

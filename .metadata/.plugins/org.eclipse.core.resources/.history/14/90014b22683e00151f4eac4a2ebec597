@@ -1,0 +1,10 @@
+package problemset;
+
+import common.TreeNode;
+
+public class MinDepth {
+	public int solution(TreeNode node)
+	{
+		
+	}
+}

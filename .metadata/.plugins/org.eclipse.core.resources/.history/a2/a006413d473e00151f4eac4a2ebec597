@@ -1,0 +1,11 @@
+package problemset;
+
+import java.util.Hashtable;
+
+public class RomanToInt {
+	public int solution(String s)
+	{
+		Hashtable<Character, Integer> roman = new Hashtable<>();
+		roman.put('I', 1);
+	}
+}

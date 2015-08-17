@@ -1,0 +1,16 @@
+package problemset;
+
+public class MyAtoi {
+	public int solution(String str)
+	{
+		String trimStr = str.trim();
+		
+		int c0 = trimStr.charAt(0);
+		if (!((c0 >= '0' && c0 <= '9') || (c0 == '+') || (c0 == '-'))) return 0;
+		int num = Character.getNumericValue(trimStr.charAt(0));
+		if (num == -1) return 0;
+		for (int i = 1; i < trimStr.length(); i++) {
+			int d = Character.getNumericValue(trimStr.charAt(i));
+		}
+	}
+}

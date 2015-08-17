@@ -1,0 +1,8 @@
+package problemset;
+
+public class ContainsNearbyDuplicate {
+	public boolean solution(int[] nums, int k)
+	{
+		
+	}
+}

@@ -1,0 +1,21 @@
+package problemset;
+
+public class IsIsomorphic {
+	public boolean solution(String s, String t)
+	{
+		int len = s.length();
+		if (len != t.length()) return false;
+		else {
+			s.toLowerCase();
+			t.toLowerCase();
+		}
+	}
+	
+	public void test()
+	{
+		System.out.println("A = " + Character.getNumericValue('A'));
+		System.out.println("a = " + Character.getNumericValue('a'));
+		System.out.println("Z = " + Character.getNumericValue('Z'));
+		System.out.println("z = " + Character.getNumericValue('z'));
+	}
+}

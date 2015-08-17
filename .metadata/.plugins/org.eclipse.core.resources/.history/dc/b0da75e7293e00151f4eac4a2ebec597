@@ -1,0 +1,18 @@
+package problemset;
+
+public class CompareVersion {
+	public int solution(String version1, String version2)
+	{
+		System.out.println(version1);
+//		String[] ver1 = version1.split(".");
+		for (String s: version1.split(".", 10)) {
+			System.out.println(s);
+		}
+//		System.out.println(ver1[0]);
+		return 0;
+	}
+	
+	public void test() {
+		solution("12.2.5", "4.22.1");
+	}
+}

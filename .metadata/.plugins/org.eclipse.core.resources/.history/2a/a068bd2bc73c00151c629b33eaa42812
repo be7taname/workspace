@@ -1,0 +1,36 @@
+package problemset;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PascalTriangle {
+	public List<List<Integer>>solution(int numRows)
+	{
+		List<List<Integer>> pasTri = new ArrayList<>();
+		
+		List<Integer> curRow;
+		if (numRows > 0) {
+			for (int i = 0; i <  numRows; i++) {
+				curRow = new ArrayList<>();
+				if (i == 0) {
+					curRow.add(1);
+				} else {
+					curRow.add(1);
+					curRow.set(numRows - 1, 1);
+					for (int j = 1; j < numRows - 1; j++) {
+						curRow.set(j, pasTri.get(i-1).get(j-1) + pasTri.get(i-1).get(j));
+					}
+				}
+				pasTri.add(curRow);
+			}
+		}
+	
+		return pasTri;
+	}
+	
+	public void test()
+	{
+		System.out.println(solution(5));
+	}
+	
+}

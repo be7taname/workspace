@@ -1,0 +1,5 @@
+[DEBUG] 2015-08-09 22:42:09.500 [main] p.Algorithms:  141 - debug: no trace.
+[INFO ] 2015-08-09 22:42:09.502 [main] p.Algorithms:  142 - info : no trace, debug.
+[WARN ] 2015-08-09 22:42:09.502 [main] p.Algorithms:  143 - warn : no trace, debug, info.
+[ERROR] 2015-08-09 22:42:09.502 [main] p.Algorithms:  144 - error: no trace, debug, info, warn.
+[FATAL] 2015-08-09 22:42:09.502 [main] p.Algorithms:  145 - fatal: no trace, debug, info, warn, error.

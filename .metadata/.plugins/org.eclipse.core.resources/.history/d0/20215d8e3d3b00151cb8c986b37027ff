@@ -1,0 +1,8 @@
+package problemset;
+
+public class MyAtoi {
+	public int solution(String str)
+	{
+		String trimStr = str.trim();
+	}
+}

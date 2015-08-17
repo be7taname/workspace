@@ -1,0 +1,20 @@
+package problemset;
+
+import java.util.*;
+
+import common.TreeNode;
+
+public class LevelOrder {
+	public List<List<Integer>>solution(TreeNode root) {
+		List<List<Integer>> LevelOrderVal = new ArrayList<>();
+		Queue<TreeNode> treeQ = new LinkedList<TreeNode>();
+		
+		treeQ.add(root);
+		TreeNode lastNodeInLevel = root;
+		while (!treeQ.isEmpty()) {
+			
+		}
+		
+		return LevelOrderVal;
+	}
+}

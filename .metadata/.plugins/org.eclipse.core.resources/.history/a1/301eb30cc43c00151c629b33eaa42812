@@ -1,0 +1,8 @@
+package problemset;
+
+public class PascalTriangle {
+	public List<List<Integer>>solutions(int numRows)
+	{
+		
+	}
+}

@@ -1,0 +1,17 @@
+package problemset;
+
+public class LengthOfLastWord {
+	public int solution(String s)
+	{
+		int lastIndex = s.lastIndexOf(' ');
+		int strLen = s.length();
+		if (lastIndex != strLen - 1) {
+			return strLen - lastIndex - 1;
+		} else {
+			for (int i = strLen - 2; i >= 0; i--) {
+				if (s.charAt(i) != ' ') break;
+			}
+			return 0;
+		}
+	}
+}

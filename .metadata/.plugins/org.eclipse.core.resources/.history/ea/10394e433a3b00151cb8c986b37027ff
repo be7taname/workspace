@@ -1,0 +1,32 @@
+package problemset;
+
+public class CountPrimes {
+	public int solution(int n)
+	{
+
+		boolean[] nonPrimeTable = new boolean[n]; // trick 1: table
+		
+		int nroot = (int)Math.sqrt(n);
+		int primeCnt = 0;
+		for (int i = 2; i <= nroot; i++) {        // trick 2: ending condition
+			if (nonPrimeTable[i] == false) {      // trick 3: only prime number
+				primeCnt++;
+				int curSqr = i*i;                 // trick 4: starting position
+				for (int j = curSqr; j < n; j += i) {
+					nonPrimeTable[j] = true;
+				}
+			}
+		}
+		for (int i = nroot + 1; i < n; i++) {
+			if (nonPrimeTable[i] == false) primeCnt++;
+		}
+		
+		return primeCnt;
+		
+		if (n <= 2) return 0;
+		if (n == 3) return 1;
+		else {
+			
+		}
+	}
+}

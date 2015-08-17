@@ -1,0 +1,10 @@
+package problemset;
+
+import common.ListNode;
+
+public class DeleteNode {
+	public void solution(ListNode node)
+	{
+		
+	}
+}

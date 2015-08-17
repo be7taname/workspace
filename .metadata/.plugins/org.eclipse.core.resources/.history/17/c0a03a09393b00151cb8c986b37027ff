@@ -1,0 +1,24 @@
+package problemset;
+
+public class CountPrimes {
+	public int solution(int n)
+	{
+
+		boolean[] nonPrimeTable = new boolean[n];
+		
+		int nroot = (int)Math.sqrt(n);
+		for (int i = 2; i <= nroot; i++) {
+			if (nonPrimeTable[i] == false) {
+				int curSqr = i*i;
+				for (int j = curSqr; j < n; j += i) {
+					nonPrimeTable[j] = true;
+				}
+			}
+		}
+		if (n <= 2) return 0;
+		if (n == 3) return 1;
+		else {
+			
+		}
+	}
+}

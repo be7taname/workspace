@@ -1,0 +1,20 @@
+package problemset;
+
+import common.TreeNode;
+
+public class HasPathSum {
+	public boolean solution(TreeNode root, int sum)
+	{
+        if (root == null) return false;
+		if ((root.left == null) && (root.right == null) && (root.val == sum)) return true;
+		
+		if (root.left != null) {
+			if (solution(root.left, sum - root.val)) return true;
+		}
+		if (root.right != null) {
+			if (solution(root.right, sum - root.val)) return true;
+		}
+		
+		return false;
+	}
+}

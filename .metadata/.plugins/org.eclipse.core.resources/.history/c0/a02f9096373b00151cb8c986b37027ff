@@ -1,0 +1,17 @@
+package problemset;
+
+public class CountPrimes {
+	public int solution(int n)
+	{
+
+		boolean[] table = new boolean[n];
+		
+		int nroot = (int)Math.sqrt(n)
+		for (int i = 0; i < )
+		if (n <= 2) return 0;
+		if (n == 3) return 1;
+		else {
+			
+		}
+	}
+}

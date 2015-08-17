@@ -1,0 +1,8 @@
+package problemset;
+
+public class HasPathSum {
+	public boolean solution(TreeNode root, int sum)
+	{
+		
+	}
+}

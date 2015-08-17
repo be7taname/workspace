@@ -1,0 +1,43 @@
+package problemset;
+
+import java.util.Hashtable;
+
+public class IsIsomorphic {
+	public boolean solution(String s, String t)
+	{
+		Hashtable<Character, Character> mapTable = new Hashtable<>();
+		Hashtable<Character, Character> demapTable = new Hashtable<>();
+		int len = s.length();
+		if (len != t.length()) return false;
+		else {
+			s.toLowerCase();
+			t.toLowerCase();
+			for (int i = 0; i < len; i++) {
+				char c = s.charAt(i);
+				char d = t.charAt(i);
+				if ((!mapTable.containsKey(c)) && (!demapTable.containsKey(d))) {
+					mapTable.put(c, d);
+					demapTable.put(d, c);
+				} else if ((mapTable.containsKey(c)) && (demapTable.containsKey(d))) {
+					if (!((mapTable.get(c) == d) && (demapTable.get(d) == c))) {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+	public void test()
+	{
+		System.out.println("1 = " + Character.getNumericValue('1'));
+		System.out.println("a = " + Character.getNumericValue('a'));
+		System.out.println("Z = " + Character.getNumericValue('Z'));
+		System.out.println("z = " + Character.getNumericValue('z'));
+		System.out.println(solution("basa", "godo"));
+		System.out.println(solution("3411", "2355"));
+	}
+}

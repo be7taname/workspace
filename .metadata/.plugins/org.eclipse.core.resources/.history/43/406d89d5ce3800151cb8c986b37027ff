@@ -1,0 +1,111 @@
+package common;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+//Implement Stack using Queues
+public class MyStack {
+	Queue<Integer> q0 = new LinkedList<>();
+	Queue<Integer> q1 = new LinkedList<>();
+	int mainQ = 0;
+	
+    // Push element x onto stack.
+    public void push(int x) {
+        if (mainQ == 0) {
+       		q0.add(x);
+        } else {
+        	q1.add(x);
+        }
+    }
+
+    // Removes the element on top of the stack.
+    public void pop() {
+    	int qsize;
+        if (mainQ == 0) {
+        	if (q0.isEmpty()) {
+        		for (int i = 0; i < q1.size() - 1; i++) {
+        			q0.add(q1.remove());
+        		}
+        		q1.remove();
+        		mainQ = 1;
+        	} else if (q0.size() == 1) {
+        		q0.remove();
+        	} else {
+        		for (int i = 0; i < q0.size() - 1; i++) {
+        			q1.add(q0.remove());
+        		}
+        		q0.remove();
+        	}
+        } else {
+        	if (q1.isEmpty()) {
+        		for (int i = 0; i < q0.size() - 1; i++) {
+        			q1.add(q0.remove());
+        		}
+        		q0.remove();
+        		mainQ = 0;
+        	} else if (q1.size() == 1) {
+        		q1.remove();
+        	} else {
+        		for (int i = 0; i < q1.size() - 1; i++) {
+        			q0.add(q1.remove());
+        		}
+        		q1.remove();
+        	}
+        }
+    }
+
+    // Get the top element.
+    public int top() {
+    	int x, qsize;
+        if (mainQ == 0) {
+        	if (q0.isEmpty()) {
+        		qsize = q1.size();
+        		for (int i = 0; i < qsize - 1; i++) {
+        			q0.add(q1.remove());
+        		}
+        		x = q1.peek();
+        		mainQ = 1;
+        	} else if (q0.size() == 1) {
+        		x = q0.peek();
+        	} else {
+            	qsize = q0.size();
+        		for (int i = 0; i < qsize - 1; i++) {
+        			q1.add(q0.remove());
+        		}
+        		x = q0.peek();
+        	}
+        } else {
+        	if (q1.isEmpty()) {
+        		qsize = q0.size();
+        		for (int i = 0; i < qsize - 1; i++) {
+        			q1.add(q0.remove());
+        		}
+        		x = q0.peek();
+        		mainQ = 0;
+        	} else if (q1.size() == 1) {
+        		x = q1.peek();
+        	} else {
+        		qsize = q1.size();
+        		for (int i = 0; i < qsize - 1; i++) {
+        			q0.add(q1.remove());
+        		}
+        		x = q1.peek();
+        	}
+        }
+        return x;
+    }
+
+    // Return whether the stack is empty.
+    public boolean empty() {
+        return (q0.isEmpty() && q1.isEmpty());
+    }
+    
+    public void test() 
+    {
+    	MyStack ms = new MyStack();
+    	ms.push(1);
+    	ms.push(2);
+    	ms.push(3);
+    	System.out.println(ms.top());
+    }
+}

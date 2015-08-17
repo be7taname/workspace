@@ -1,0 +1,25 @@
+package problemset;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import common.TreeNode;
+
+public class MinDepth {
+	public int solution(TreeNode root)
+	{
+		if (root == null) return 0;
+
+		Queue<TreeNode> nodes = new LinkedList<>();
+		Queue<Integer> depths = new LinkedList<>();
+				
+		nodes.add(root);
+		depths.add(1);
+		
+		TreeNode curNode;
+		int curDepth;
+		while (!nodes.isEmpty()) {
+			curNode = 
+		}
+	}
+}

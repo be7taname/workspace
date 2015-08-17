@@ -1,0 +1,27 @@
+package common;
+
+public class MinStack {
+	StackNode head;
+	StackNode head4min;
+
+    public void push(int x) {
+    	StackNode st = new StackNode();
+    }
+
+    public void pop() {
+        
+    }
+
+    public int top() {
+        
+    }
+
+    public int getMin() {
+        
+    }
+    
+    class StackNode {
+    	public int val;
+    	public StackNode next;
+    }
+}

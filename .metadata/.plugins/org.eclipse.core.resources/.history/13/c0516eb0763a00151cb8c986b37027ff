@@ -1,0 +1,27 @@
+package problemset;
+
+import common.ListNode;
+
+public class ReverseList {
+	public ListNode solution(ListNode head)
+	{
+		if (head == null) return head;
+		
+		ListNode curNode, tail = head;
+		while (tail.next != null) {
+			curNode = tail.next;
+			tail.next = curNode.next;
+			curNode.next = head;
+			head = curNode;
+		}
+		
+		return head;
+	}
+
+
+	public ListNode solutionRec(ListNode head)
+	{
+		if (head == null) return head;
+		
+	}
+}

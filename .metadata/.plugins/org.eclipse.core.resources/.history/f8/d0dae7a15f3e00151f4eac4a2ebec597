@@ -1,0 +1,12 @@
+package problemset;
+
+public class StrStr {
+	public int StrStr(String haystack, String needle)
+	{
+		int hlen = haystack.length();
+		int nlen = needle.length();
+		for (int i = 0; i < hlen - nlen; i++) {
+			
+		}
+	}
+}

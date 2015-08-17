@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;problemset.Palindrome&apos; to &apos;IsPalindrome&apos;&#x0A;- Original project: &apos;leetcodeoj&apos;&#x0A;- Original element: &apos;problemset.Palindrome&apos;&#x0A;- Renamed element: &apos;problemset.IsPalindrome&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Palindrome&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;problemset{Palindrome.java[Palindrome" matchStrategy="1" name="IsPalindrome" qualified="false" references="true" similarDeclarations="false" stamp="1436853158112" textual="false" version="1.0"/>
+</session>

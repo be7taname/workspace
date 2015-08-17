@@ -1,0 +1,26 @@
+package problemset;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SummaryRanges {
+	public List<String> solution(int[] nums) {
+		List<String> range = new ArrayList<>();
+		
+		if (nums.length == 0) return range;
+		int curStart, curEnd;
+		curStart = nums[1];
+		curEnd = nums[1];
+		String thisRange = new String();
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] - curEnd == 1) {
+				
+			} else {
+				thisRange = new
+				curStart = nums[i];
+			}
+		}
+		
+		return range;
+	}
+}

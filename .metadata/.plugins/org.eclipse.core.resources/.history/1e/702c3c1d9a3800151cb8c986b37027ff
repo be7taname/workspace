@@ -1,0 +1,7 @@
+package problemset;
+
+public class IsPowerOfTwo {
+	public void solution(int n) {
+		
+	}
+}

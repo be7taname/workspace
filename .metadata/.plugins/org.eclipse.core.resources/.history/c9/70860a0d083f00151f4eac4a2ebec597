@@ -1,0 +1,26 @@
+package problemset;
+
+public class AddBinary {
+	public String solution(String a, String b)
+	{
+		char c = '0';
+		for (int i = 0; i < a.length(); i++) {
+			numA <<= 1;
+			if (a.charAt(i) == '1') numA ^= 1;
+		}
+		for (int i = 0; i < b.length(); i++) {
+			numB <<= 1;
+			if (b.charAt(i) == '1') numB ^= 1;
+		}
+		numC = numA + numB;
+		while (numC > 0) {
+			if ((numC & 1) == 1) {
+				c = '1' + c;
+			} else {
+				c = '0' + c;
+			}
+			numC >>= 1;
+		}
+		return c;
+	}
+}

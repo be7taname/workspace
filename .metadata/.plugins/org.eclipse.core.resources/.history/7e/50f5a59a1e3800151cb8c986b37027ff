@@ -1,0 +1,19 @@
+package problemset;
+
+import common.ListNode;
+
+public class MergeTwoLists {
+	public ListNode solution(ListNode l1, ListNode l2)
+	{
+		if ((l1 == null) && (l2 == null)) return null;
+		if ((l1 != null) && (l2 == null)) return l1;
+		if ((l1 == null) && (l2 != null)) return l2;
+		
+		ListNode l1cur = l1;
+		ListNode l2cur = l2;
+		while ((l1cur != null) || (l2cur != null)) {
+			
+		}
+		ListNode head = new ListNode();
+	}
+}

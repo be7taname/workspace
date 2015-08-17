@@ -1,0 +1,8 @@
+package problemset;
+
+public class DeleteDuplicates {
+	public ListNode solution(ListNode head)
+	{
+		
+	}
+}

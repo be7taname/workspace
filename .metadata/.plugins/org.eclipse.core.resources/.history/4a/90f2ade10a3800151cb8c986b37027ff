@@ -1,0 +1,27 @@
+package common;
+
+import java.util.Stack;
+
+public class MinStack {
+	Stack st = new Stack();
+
+    public void push(int x) {
+    	
+    }
+
+    public void pop() {
+        
+    }
+
+    public int top() {
+        
+    }
+
+    public int getMin() {
+        
+    }
+    
+    class StackNode {
+    	public int val;
+    }
+}

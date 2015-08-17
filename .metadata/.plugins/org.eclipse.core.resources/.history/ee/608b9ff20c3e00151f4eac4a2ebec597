@@ -1,0 +1,14 @@
+package problemset;
+
+public class IsHappyNumber {
+	public boolean solution(int n)
+	{
+		if (n <= 0) return false;
+		
+		int s = 0;
+		while (n > 0) {
+			s += (n%10)*(n%10);
+			n /= 10;
+		}
+	}
+}

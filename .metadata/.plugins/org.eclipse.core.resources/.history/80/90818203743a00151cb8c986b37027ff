@@ -1,0 +1,12 @@
+package problemset;
+
+import common.ListNode;
+
+public class ReverseList {
+	public ListNode solution(ListNode head)
+	{
+		while (head.next != null) {
+			
+		}
+	}
+}

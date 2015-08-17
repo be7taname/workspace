@@ -1,0 +1,11 @@
+package problemset;
+
+public class ComputeArea {
+	public int solution(int A, int B, int C, int D, int E, int F, int G, int H) {
+		
+	}
+	
+	public int compRectArea(int A, int B, int C, int D) {
+		
+	}
+}

@@ -1,0 +1,23 @@
+package problemset;
+
+public class ZigzagConvert {
+	public String solution(String s, int numRows)
+	{
+		if (numRows == 1) return s;
+		
+		String t = new String("");
+		int gap = (numRows - 1) * 2, dist1;
+		
+		for (int i = 0; i < numRows; i++) {
+			dist1 = gap - 2*i;
+			int curIdx = i;
+			while (curIdx < s.length()) {
+				t.concat(String.valueOf(s.charAt(curIdx)));
+				if ((dist1 != 0) && (curIdx + dist1 < s.length())) {
+					t.concat(String.valueOf(s.charAt(curIdx + dist1)));
+				}
+				curIdx += gap;
+			}
+		}
+	}
+}

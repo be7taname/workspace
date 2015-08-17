@@ -1,0 +1,18 @@
+package problemset;
+
+import common.ListNode;
+
+public class GetIntersectionNode {
+	public ListNode solution(ListNode headA, ListNode headB)
+	{
+		int lenA, lenB;
+		ListNode tmp;
+		
+		lenA = lenB = 0;
+		tmpA = headA;
+		while (tmpA != null) {
+			tmpA = tmpA.next;
+			lenA++;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package problemset;
+
+import common.ListNode;
+
+public class DeleteDuplicates {
+	public ListNode solution(ListNode head)
+	{
+		if (head == null) return head;
+	}
+}

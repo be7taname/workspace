@@ -1,0 +1,7 @@
+package problemset;
+
+public class SummaryRanges {
+	public List<String> solution(int[] nums) {
+		List<String> range = new ArrayList<>();
+	}
+}

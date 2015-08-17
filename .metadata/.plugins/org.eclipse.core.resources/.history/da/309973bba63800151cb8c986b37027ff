@@ -1,0 +1,15 @@
+package problemset;
+
+public class IsAnagram {
+	public boolean solution(String s, String t) {
+		if (s.length() != t.length()) return false;
+		
+		while (s.length() != 0) {
+			String ss = String.valueOf(s.charAt(0));
+			s.replaceAll(ss, "");
+			t.replaceAll(ss, "");
+			if (s.length() != t.length()) return false;
+			if (s.length() == 0) return true;
+		}
+	}
+}

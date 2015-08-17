@@ -1,0 +1,12 @@
+package problemset;
+
+public class MergeSortedArray {
+	public void solution(int[] nums1, int m, int[] nums2, int n)
+	{
+		int idx2 = n-1;
+		
+		while (idx2 >= 0) {
+			
+		}
+	}
+}

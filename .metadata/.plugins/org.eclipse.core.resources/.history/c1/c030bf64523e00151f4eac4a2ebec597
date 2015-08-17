@@ -1,0 +1,10 @@
+package problemset;
+
+import common.ListNode;
+
+public class RemoveNthFromEnd {
+	public ListNode solution(ListNode head, int n)
+	{
+		
+	}
+}

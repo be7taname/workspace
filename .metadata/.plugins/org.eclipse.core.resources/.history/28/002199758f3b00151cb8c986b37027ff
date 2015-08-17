@@ -1,0 +1,12 @@
+package problemset;
+
+public class IsIsomorphic {
+	public boolean solution(String s, String t)
+	{
+		int len = s.length();
+		if (len != t.length()) return false;
+		else {
+			
+		}
+	}
+}

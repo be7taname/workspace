@@ -1,0 +1,105 @@
+package problemset;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PascalTriangle {
+	public List<List<Integer>>solution(int numRows)
+	{
+		List<List<Integer>> pasTri = new ArrayList<>();
+		
+		List<Integer> curRow;
+		if (numRows > 0) {
+			for (int i = 0; i <  numRows; i++) {
+				curRow = new ArrayList<>();
+				if (i == 0) {
+					curRow.add(1);
+				} else {
+					curRow.add(1);
+					for (int j = 1; j < (i + 2) / 2; j++) {
+						curRow.add(pasTri.get(i-1).get(j-1) + pasTri.get(i-1).get(j));
+					}
+					for (int j = (i + 2) / 2; j < i; j++) {
+						curRow.add(curRow.get(i-j));
+					}
+					curRow.add(1);
+				}
+				pasTri.add(curRow);
+			}
+		}
+	
+		return pasTri;
+	}
+	
+	public List<Integer> getRow(int rowIndex)
+	{
+		List<Integer> rowInList = new ArrayList<>();
+		
+		if (rowIndex == 0) {
+			rowInList.add(1);
+			return rowInList;
+		} else if (rowIndex == 1) {
+			rowInList.add(1);
+			rowInList.add(1);
+			return rowInList;
+		}
+		
+		int[] row = new int[rowIndex + 1]; 
+		int i, j;
+		row[0] = row[1] = 1;
+		for (i = 2; i <= rowIndex; i++) {
+			if (i%2 == 0) {
+				for (j = 1; j < i/2; j++) {
+					row[j] = row[i-1-j+1] + row[i-2-j+1];
+				}
+				row[j] += row[j];
+				for (j = i/2 + 1; j <= i; j++) {
+					row[j] = row[i-j];
+				}
+			} else {
+				for (j = 1; j <= i/2; j++) {
+					row[j] = row[i-1-j+1] + row[i-2-j+1];
+				}
+				for (j = i/2 + 1; j <= i; j++) {
+					row[j] = row[i-j];
+				}
+			}
+		}
+		
+		for (i = 0; i <= rowIndex; i++) {
+			rowInList.add(row[i]);
+		}
+		
+		return rowInList;
+	}
+	
+	public List<Integer> getRow2(int rowIndex)
+	{
+		List<Integer> row = new ArrayList<>();
+		
+		row.add(1);
+		for (int i = 1; i <= rowIndex; i++) {
+			for (int j = row.size()-1; j >= 1; j++) {
+				row.set(j, row.get(j) + row.get(j-1));
+			}
+			row.add(1);
+		}
+		return row;
+	}
+
+	public void test()
+	{
+		System.out.println(solution(5));
+	}
+
+	public void testGetRow()
+	{
+		System.out.println(getRow(0));
+		System.out.println(getRow(1));
+		System.out.println(getRow(2));
+		System.out.println(getRow(3));
+		System.out.println(getRow(4));
+		System.out.println(getRow(5));
+	}
+
+}

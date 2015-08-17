@@ -1,0 +1,24 @@
+package problemset;
+
+public class IsAnagram {
+	public boolean solution(String s, String t) {
+		if (s.length() != t.length()) return false;
+		
+//		while (s.length() != 0) {
+			char ch = s.charAt(0);
+			s.replace(Character.toString(ch), "");
+			t.replace(Character.toString(ch), "");
+			System.out.println(s);
+			if (s.length() != t.length()) return false;
+			System.out.println(s.length());
+//		}
+		return true;
+	}
+	
+	public void test() {
+		String s = "anagram";
+		String t = "nagaram";
+		
+		System.out.println("Is " + s + " and " + t + "Anagram?: " + solution(s, t));
+	}
+}

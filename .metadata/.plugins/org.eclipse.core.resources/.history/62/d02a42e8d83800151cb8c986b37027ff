@@ -1,0 +1,19 @@
+package problemset;
+
+public class ComputeArea {
+	public int solution(int A, int B, int C, int D, int E, int F, int G, int H) {
+		
+		if ((C <= E) || (G <= A) || (D <= F) || (H <= B)) {
+			return (C - A)*(D - B) + (G - E)*(H - F);
+		} else {
+		    int right = Math.min(C,G);
+		    int left = Math.max(A,E);
+		    int top = Math.min(H,D);
+		    int bottom = Math.max(F,B);
+		}
+	}
+	
+	public int compRectArea(int A, int B, int C, int D) {
+		return (C - A)*(D - B);
+	}
+}

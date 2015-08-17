@@ -1,0 +1,8 @@
+package problemset;
+
+public class CountPrimes {
+	public int solution(int n)
+	{
+		if (n <= 2) return 0;
+	}
+}

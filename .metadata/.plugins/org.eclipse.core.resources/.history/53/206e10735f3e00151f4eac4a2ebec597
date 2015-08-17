@@ -1,0 +1,8 @@
+package problemset;
+
+public class StrStr {
+	public int StrStr(String haystack, String needle)
+	{
+		
+	}
+}

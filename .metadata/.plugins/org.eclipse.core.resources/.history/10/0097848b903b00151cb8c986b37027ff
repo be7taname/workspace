@@ -1,0 +1,93 @@
+package problemset;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.Configuration;
+
+import common.MyStack;
+
+public class Algorithms {
+    private static final Logger logger = LogManager.getLogger();
+    
+    public static void main(String[] args) 
+    {
+    	LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
+    	Configuration conf = ctx.getConfiguration();
+    	conf.getLoggerConfig(LogManager.ROOT_LOGGER_NAME).setLevel(Level.DEBUG);
+    	ctx.updateLoggers(conf);
+
+        int titleNum;
+    	
+    	titleNum = 205;
+    	switch(titleNum) {
+    		case 6:		ZigzagConvert zc = new ZigzagConvert();
+    					zc.test();
+    					break;
+    		case 8:		MyAtoi ma = new MyAtoi();
+    					ma.test();
+    					break; // String to Integer (atoi), Hard
+    		case 9: 	IsPalindrome ip = new IsPalindrome();
+    					ip.test();
+    					break;
+    		case 21:	break; // Merge Two Sorted Lists
+    		case 36:	break; // Valid Sudoku
+    		case 38:	CountAndSay cas = new CountAndSay();
+    					cas.test();
+    					break;
+    		case 58:	LengthOfLastWord lolw = new LengthOfLastWord();
+    					lolw.test();
+    					break;
+    		case 102:	LevelOrder lo = new LevelOrder();
+    					lo.test();
+    					break;
+    		case 104:	MaxDepth md = new MaxDepth();
+    					md.test();
+    					break;
+    		case 110:	IsBalanced ib = new IsBalanced();
+    		    		ib.test();
+    		    		break;
+    		case 155:   break; // Min Stack
+    		case 169:	MajorityElement me = new MajorityElement();
+    					me.test();
+    					break;
+    		case 204:	break; // Count Primes, Hard
+    		case 205;	IsIsomorphic ii = new IsIsomorphic();
+    					ii.test();
+    					break;
+    		case 206:	break; // Reverse Linked List
+    		case 217:	break; // Contains Duplicate
+    		case 219:	break; // Contains Nearby Duplicate
+    		case 223:	break; // Rectangle Area, Hard
+    		case 225:	MyStack ms = new MyStack();
+    					ms.test();
+    					break;
+    		case 226:	InvertTree it = new InvertTree();
+						it.test();
+						break;
+    		case 228:	SummaryRanges sr = new SummaryRanges();
+    					sr.test();
+    					break;
+    		case 231:	break; // Power of Two
+    		case 232:	break; // Implement Queue using Stacks
+    		case 234:   IsPalindrome ipLn = new IsPalindrome();
+    					ipLn.test2();
+    					break;
+    		case 235:	break; // Lowest Common Ancestor, Hard
+    		case 237:	break; // Delete Node in a Linked List, Hard 
+    		case 242:	IsAnagram ia = new IsAnagram();
+    					ia.test();
+    					break;
+    		default:	System.out.println("Do nothing.");
+    					break;
+    	}
+		
+		logger.trace("trace: everything is logged.");
+		logger.debug("debug: no trace.");
+		logger.info ("info : no trace, debug.");
+		logger.warn ("warn : no trace, debug, info.");
+		logger.error("error: no trace, debug, info, warn.");
+		logger.fatal("fatal: no trace, debug, info, warn, error.");
+   }
+}

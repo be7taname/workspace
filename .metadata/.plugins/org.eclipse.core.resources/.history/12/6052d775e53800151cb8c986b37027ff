@@ -1,0 +1,19 @@
+package problemset;
+
+import java.util.HashSet;
+
+public class ContainsDuplicate {
+	public boolean solution(int[] nums)
+	{
+		HashSet<Integer> hset = new HashSet<>();
+		
+		for (int i = 0; i < nums.length; i++) {
+//			if (counter.containsKey(nums[i])) return true;
+//			else counter.put(nums[i], 1);
+			if (hset.contains(nums[i])) return true;
+			else hset.add(nums[i]);
+		}
+		
+		return false;
+	}
+}

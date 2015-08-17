@@ -1,0 +1,19 @@
+package problemset;
+
+public class ComputeArea {
+	public int solution(int A, int B, int C, int D, int E, int F, int G, int H) {
+		int area;
+		
+		area = compRectArea(A, B, C, D) + compRectArea(E, F, G, H);
+		
+		if ((C <= E) || (G <= A) || (D <= F) || (H <= B)) {
+			return area;
+		} else {
+			
+		}
+	}
+	
+	public int compRectArea(int A, int B, int C, int D) {
+		return (C - A)*(D - B);
+	}
+}

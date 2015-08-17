@@ -1,0 +1,58 @@
+package problemset;
+
+public class AddBinary {
+	public String solution(String a, String b)
+	{
+		char c = '0', ca, cb;
+		String s = "";
+		int inda = a.length() - 1, indb = b.length() - 1;
+		while (inda >= 0 && indb >= 0) {
+			ca = a.charAt(inda);
+			cb = b.charAt(indb);
+			if (c == '0') {
+				if ((ca == '0') && (cb == '0')) {
+					s = '0' + s;
+				} else if ((ca == '0') || (cb == '0')) {
+					s = '1' + s;
+				} else {
+					s = '0' + s;
+					c = '1';
+				}
+			} else {
+				if ((ca == '0') && (cb == '0')) {
+					s = '1' + s;
+					c = '0';
+				} else if ((ca == '0') || (cb == '0')) {
+					s = '0' + s;
+				} else {
+					s = '1' + s;
+				}
+			}
+			inda--;
+			indb--;
+		}
+		if (inda >= 0) {
+			ca = a.charAt(inda);
+			if ((ca == '0') && (c == '0')) {
+				s = '0' + s;
+			} else if ((ca == '0') || (c == '0')) {
+				s = '1' + s;
+			} else {
+				s = '0' + s;
+				c = '1';
+			}
+		}
+		if (indb >= 0) {
+			cb = b.charAt(indb);
+			if ((cb == '0') && (c == '0')) {
+				s = '0' + s;
+			} else if ((cb == '0') || (c == '0')) {
+				s = '1' + s;
+			} else {
+				s = '0' + s;
+				c = '1';
+			}
+		}
+		return s;
+	}
+}

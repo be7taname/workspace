@@ -1,0 +1,9 @@
+package problemset;
+
+public class ConvertToExcelColumnTitle {
+	public String solution(int n)
+	{
+		char[] table = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+		int num = 26;
+	}
+}

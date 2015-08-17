@@ -1,0 +1,14 @@
+package problemset;
+
+public class IsValidSudoku {
+	public boolean solution(char[][] board)
+	{
+		int[] counter = new int[9];
+		
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				
+			}
+		}
+	}
+}

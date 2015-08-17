@@ -1,0 +1,8 @@
+package problemset;
+
+public class MaxDepth {
+	public int solution(TreeNode root)
+	{
+		if (root == null) return 0;
+	}
+}

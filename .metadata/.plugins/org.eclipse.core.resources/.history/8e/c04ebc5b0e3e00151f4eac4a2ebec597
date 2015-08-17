@@ -1,0 +1,29 @@
+package problemset;
+
+public class IsHappyNumber {
+	public boolean solution(int n)
+	{
+		if (n <= 0) return false;
+		int[] cnt = new int[1000];
+		
+		while (n != 1) {
+			cnt[n] = 1;
+			int s = 0;
+			while (n > 0) {
+				s += (n%10)*(n%10);
+				n /= 10;
+			}
+			n = s;
+			if (cnt[n] == 1) break;
+		}
+		
+		if (n == 1) return true;
+		else return false;
+	}
+	
+	public void test()
+	{
+		int n = 19;
+		System.out.println(n + " is a happy number: " + solution(n));
+	}
+}

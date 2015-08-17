@@ -1,0 +1,12 @@
+package problemset;
+
+public class LengthOfLastWord {
+	public void solution(String s)
+	{
+		int lastIndex = s.lastIndexOf(' ');
+		int strLen = s.length();
+		if (lastIndex != strLen - 1) {
+			return strLen - lastIndex - 1;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package problemset;
+
+public class ZigzagConvert {
+	public String solution(String s, int numRows)
+	{
+		String t = new String("");
+		int gap = (numRows - 1) * 2;
+	}
+}

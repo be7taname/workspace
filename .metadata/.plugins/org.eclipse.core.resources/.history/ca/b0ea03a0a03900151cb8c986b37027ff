@@ -1,0 +1,8 @@
+package problemset;
+
+public class DeleteNode {
+	public void solution(ListNode node)
+	{
+		
+	}
+}

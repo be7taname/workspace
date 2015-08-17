@@ -1,0 +1,8 @@
+package problemset;
+
+public class TrailingZeroes {
+	public int solution(int n)
+	{
+		
+	}
+}

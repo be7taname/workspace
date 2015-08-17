@@ -1,0 +1,8 @@
+package problemset;
+
+public class RemoveElement {
+	public int solution(int[] nums, int val)
+	{
+		
+	}
+}

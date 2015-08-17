@@ -1,0 +1,8 @@
+package problemset;
+
+public class IsValidParentheses {
+	public boolean solution(String s)
+	{
+		Stack<String> = new Stack<>();
+	}
+}

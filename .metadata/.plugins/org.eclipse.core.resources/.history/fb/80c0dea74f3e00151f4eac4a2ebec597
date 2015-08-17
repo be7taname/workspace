@@ -1,0 +1,8 @@
+package problemset;
+
+public class RemoveNthFromEnd {
+	public ListNode solution(ListNode head, int n)
+	{
+		
+	}
+}

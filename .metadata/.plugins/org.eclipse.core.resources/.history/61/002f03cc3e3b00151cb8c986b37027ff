@@ -1,0 +1,12 @@
+package problemset;
+
+public class MyAtoi {
+	public int solution(String str)
+	{
+		String trimStr = str.trim();
+		
+		for (int i = 0; i < trimStr.length(); i++) {
+			
+		}
+	}
+}

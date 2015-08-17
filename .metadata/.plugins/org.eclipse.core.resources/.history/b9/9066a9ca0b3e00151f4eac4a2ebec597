@@ -1,0 +1,8 @@
+package problemset;
+
+public class IsHappyNumber {
+	public boolean solution(int n)
+	{
+		if (n <= 0) return false;
+	}
+}

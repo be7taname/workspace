@@ -1,0 +1,12 @@
+package problemset;
+
+public class RemoveDuplicates {
+	public int solution(int[] nums)
+	{
+		int curIdx, endIdx;
+		if (nums.length <= 1) return nums.length;
+		else {
+			
+		}
+	}
+}
